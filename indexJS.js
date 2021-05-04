@@ -1,5 +1,7 @@
 console.log("Testing! If you see this everythings okay!");
 
+let displayOutput = '';
+
 function add(a, b) {
     return a + b;
 }
@@ -31,3 +33,8 @@ function operate(a, op, b) {
             return divide(a,b);            
     }
 }
+
+let digitBtns = document.querySelectorAll('#digit');
+digitBtns.forEach(btn => {
+    btn.addEventListener('click');
+});

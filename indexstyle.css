@@ -3,6 +3,12 @@
     src: url(coolvetica\ rg.ttf);
 }
 
+html {
+    background-image: url(background.png);
+    background-position-y: center;
+    background-blend-mode: saturation;
+}
+
 #main {
     margin-top: 140px;
     display: flex;
@@ -18,6 +24,7 @@
     height: 450px;
     background-color: #1b1d1d;
     border: 10px solid #939393;
+    box-shadow: 1px 1px 20px black;
 }
 
 #display {
@@ -69,5 +76,5 @@
 }
 
 #del:hover {
-    background-color: #ad1c1c
+    background-color: #c52020
 }
