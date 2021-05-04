@@ -9,6 +9,18 @@ html {
     background-blend-mode: saturation;
 }
 
+
+#amb {
+    display: none;
+}
+
+#amb-btn {
+    position: absolute;
+    top: 160px;
+}
+
+
+
 #main {
     margin-top: 140px;
     display: flex;
@@ -24,6 +36,7 @@ html {
     height: 450px;
     background-color: #1b1d1d;
     border: 10px solid #939393;
+    border-radius: 5px;
     box-shadow: 1px 1px 20px black;
 }
 
