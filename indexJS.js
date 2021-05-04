@@ -1,7 +1,7 @@
 console.log("Testing! If you see this everythings okay!");
 
 let display = document.getElementById('display');
-let ambienceButton = document.querySelector('#amb-btn');
+let ambienceButton = document.querySelector('#icon');
 let ambience = document.querySelector('#amb');
 ambienceButton.addEventListener('click',play);
 let clickSound = document.querySelector('#click');

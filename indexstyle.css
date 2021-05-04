@@ -4,13 +4,15 @@
 }
 
 html {
-    background-image: url(background.png);
+    background-image: url(images/background.png);
     background-position-y: center;
 }
 
-
-#amb {
-    display: none;
+#icon {
+    position:absolute;
+    width: 5%;
+    top: 0;
+    right: 0;
 }
 
 #amb-btn {
