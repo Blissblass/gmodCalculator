@@ -15,6 +15,10 @@ html {
     right: 0;
 }
 
+#icon:hover {
+    cursor: pointer;
+}
+
 #amb-btn {
     position: absolute;
     top: 160px;
