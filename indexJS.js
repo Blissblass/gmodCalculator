@@ -4,6 +4,11 @@ let display = document.getElementById('display');
 let ambienceButton = document.querySelector('#amb-btn');
 let ambience = document.querySelector('#amb');
 ambienceButton.addEventListener('click',play);
+let clickSound = document.querySelector('#click');
+let errorAudio = document.querySelector('#error');
+let assignSound = document.querySelector('#assign');
+let clearSound = document.querySelector('#clear');
+let submitSound = document.querySelector('#submit-audio');
 let output = '';
 let op1 = '';
 let op2 = '';
@@ -64,6 +69,8 @@ digitBtns.forEach(btn => {
 
 function displayNum(e) {
     if(screen.textContent === '' || resDisplay) resetDisplay;
+    clickSound.currentTime = 0;
+    clickSound.play();
     display.textContent += e.target.textContent;
 }
 
@@ -74,6 +81,8 @@ operatorBtn.forEach(btn => {
 
 function setOp(operator) {
     if(currOpe !== null) evaluate();
+    assignSound.currentTime = 0;
+    assignSound.play();
     op1 = display.textContent;
     currOpe = operator.target.textContent;
     resetDisplay();
@@ -83,6 +92,8 @@ let delBtn = document.querySelector('#del');
 delBtn.addEventListener('click',clear);
 
 function clear() {
+    clearSound.currentTime = 0;
+    clearSound.play();
     op1= '';
     op2= '',
     display.textContent = '';
@@ -99,11 +110,15 @@ equalButton.addEventListener('click',evaluate);
 function evaluate() {
     if(currOpe === null || resDisplay) return;
     if(currOpe === "÷" && display.textContent === "0") {
+        errorAudio.currentTime = 0;
+        errorAudio.play();
         alert("You can't divide by 0,silly!");
         alert("You don't wanna blow up the universe now, do you?")
         clear();
         return;
     }
+    submitSound.currentTime = 0;
+    submitSound.play();
     op2 = display.textContent;
     display.textContent = roundOutput(operate(op1,currOpe,op2));
     currOpe = null;
